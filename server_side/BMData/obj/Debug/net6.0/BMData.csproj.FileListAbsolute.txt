@@ -1,0 +1,12 @@
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\BMData.csproj.AssemblyReference.cache
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\BMData.GeneratedMSBuildEditorConfig.editorconfig
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\BMData.AssemblyInfoInputs.cache
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\BMData.AssemblyInfo.cs
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\BMData.csproj.CoreCompileInputs.cache
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\bin\Debug\net6.0\BMData.deps.json
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\bin\Debug\net6.0\BMData.dll
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\bin\Debug\net6.0\BMData.pdb
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\BMData.dll
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\refint\BMData.dll
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\BMData.pdb
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMData\obj\Debug\net6.0\ref\BMData.dll

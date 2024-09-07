@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BillMakerRestAPI\\BillMakerRestAPI.csproj": {}
+  },
+  "projects": {
+    "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BillMakerRestAPI\\BillMakerRestAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BillMakerRestAPI\\BillMakerRestAPI.csproj",
+        "projectName": "BillMakerRestAPI",
+        "projectPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BillMakerRestAPI\\BillMakerRestAPI.csproj",
+        "packagesPath": "C:\\Users\\Khalid\\.nuget\\packages\\",
+        "outputPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BillMakerRestAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Khalid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMBusiness\\BMBusiness.csproj": {
+                "projectPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMBusiness\\BMBusiness.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMBusiness\\BMBusiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMBusiness\\BMBusiness.csproj",
+        "projectName": "BMBusiness",
+        "projectPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMBusiness\\BMBusiness.csproj",
+        "packagesPath": "C:\\Users\\Khalid\\.nuget\\packages\\",
+        "outputPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMBusiness\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Khalid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMData\\BMData.csproj": {
+                "projectPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMData\\BMData.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMData\\BMData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMData\\BMData.csproj",
+        "projectName": "BMData",
+        "projectPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMData\\BMData.csproj",
+        "packagesPath": "C:\\Users\\Khalid\\.nuget\\packages\\",
+        "outputPath": "D:\\PrrogrammingProjects\\Mobile\\flutter\\BillMaker\\server_side\\BMData\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Khalid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

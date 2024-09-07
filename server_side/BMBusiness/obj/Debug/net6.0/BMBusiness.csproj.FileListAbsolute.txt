@@ -1,0 +1,15 @@
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\bin\Debug\net6.0\BMBusiness.deps.json
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\bin\Debug\net6.0\BMBusiness.dll
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\bin\Debug\net6.0\BMBusiness.pdb
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\bin\Debug\net6.0\BMData.dll
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\bin\Debug\net6.0\BMData.pdb
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.csproj.AssemblyReference.cache
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.GeneratedMSBuildEditorConfig.editorconfig
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.AssemblyInfoInputs.cache
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.AssemblyInfo.cs
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.csproj.CoreCompileInputs.cache
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.csproj.CopyComplete
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.dll
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\refint\BMBusiness.dll
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\BMBusiness.pdb
+D:\PrrogrammingProjects\Mobile\flutter\BillMaker\server_side\BMBusiness\obj\Debug\net6.0\ref\BMBusiness.dll

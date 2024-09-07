@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wLx50HfpWBRTfGfo4trVFs9/NDZxGnRPEGJ7whMKfsI=",
+  "Source": "BillMakerRestAPI",
+  "BasePath": "_content/BillMakerRestAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
