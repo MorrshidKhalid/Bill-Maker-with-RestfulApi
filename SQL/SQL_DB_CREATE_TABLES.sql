@@ -1,18 +1,18 @@
 --Create Database FBMDB;
 
+--use master
 
 --SELECT table_name
 --FROM INFORMATION_SCHEMA.TABLES
 --WHERE table_type = 'BASE TABLE';
 
+--USE FBMDB;
 
-USE FBMDB;
+--USE master;
 
 CREATE TABLE [BUSINESSES] (
 	[BusinessID] int identity(1, 1) NOT NULL,
 	[BusinessName] nvarchar(100) NOT NULL,
-	[Logo] varchar(250) NULL,
-	[Signatuer] varchar(250) NULL,
 	PRIMARY KEY ([BusinessID])
 );
 
@@ -62,14 +62,14 @@ CREATE TABLE [STORAGES] (
 CREATE TABLE [PRODUCTS] (
 	[ProductID] int identity(1, 1) NOT NULL,
 	[BrandID] int REFERENCES BRANDS(BrandID) NOT NULL,
-	[ProductName] nvarchar(20) NOT NULL,
+	[Model] nvarchar(20) NOT NULL,
 	[ColorID] int REFERENCES COLORS(ColorID) NOT NULL,
 	[StorageID] int REFERENCES STORAGES(StorageID) NOT NULL,
 	[Condition] bit NOT NULL,
 	[Quality] tinyint NOT NULL,
 	[TermID] int REFERENCES TERMS(TermID) NOT NULL,
 	[CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
-	[PurchaPrice] smallmoney NOT NULL,
+	[PurchaPrice] MONEY NOT NULL,
 	[ProductImage] varchar(250) NULL,
 	PRIMARY KEY ([ProductID])
 );
@@ -104,6 +104,7 @@ CREATE TABLE [USERS] (
 	[Username] nvarchar(25) NOT NULL,
 	[Password] nvarchar(25) NOT NULL,
 	[IsActive] bit NOT NULL,
+	[Permission] int NOT NULL,
 	PRIMARY KEY ([UserID])
 );
 
@@ -113,12 +114,12 @@ CREATE TABLE [BILLS] (
   [BillID] int identity(1, 1) NOT NULL,
   [FromBusinessID] int REFERENCES BUSINESSES(BusinessID) NOT NULL,
   [ToCustomerID] int REFERENCES CUSTOMERS(CustomerID) NOT NULL,
-  [Amount] smallmoney NOT NULL,
+  [Amount] MONEY NOT NULL,
   [Discount] smallmoney NOT NULL,
   [Date] date NOT NULL,
   [BillStatus] tinyint NOT NULL,
   [CurrencyRate] smallmoney NOT NULL,
-  [CurrencyID] int REFERENCES CUSTOMERS(CustomerID) NOT NULL,
+  [CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
   [CreatedByUserID] int REFERENCES USERS(UserID) NOT NULL,
   PRIMARY KEY ([BillID])
 );
@@ -130,7 +131,7 @@ CREATE TABLE [BILLS_BODY] (
   [BillID] int REFERENCES BILLS(BillID) NOT NULL,
   [ProductID] int REFERENCES PRODUCTS(ProductID) NOT NULL,
   [Quantity] int NOT NULL,
-  [SellingPrice] smallmoney NOT NULL,
+  [SellingPrice] MONEY NOT NULL,
   [CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
   PRIMARY KEY ([BBodyID])
 );
@@ -152,34 +153,34 @@ CREATE TABLE [PAYMENTS] (
   [CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
   [MethodID] int REFERENCES METHODS(MethodID) NOT NULL,
   [CurrencyRate] smallmoney NOT NULL,
-  [AmountPaid] smallmoney NOT NULL,
-  [ReturnAmount] smallmoney NOT NULL,
-  [Date] smallmoney NOT NULL,
+  [AmountPaid] MONEY NOT NULL,
+  [ReturnAmount] MONEY NOT NULL,
+  [PaymentDate] DATE NOT NULL,
   [Note] nvarchar(250) NULL,
   PRIMARY KEY ([PaymentID])
 );
 
 
 
-CREATE TABLE [RETURNS] (
-  [ReturnID] int identity(1, 1) NOT NULL,
-  [FromCustomerID] int REFERENCES CUSTOMERS(CustomerID) NOT NULL,
-  [ReturnAmount] smallmoney NOT NULL,
-  [Date] date NOT NULL,
-  [CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
-  [CreatedByUserID] int REFERENCES USERS(UserID) NOT NULL,
-  PRIMARY KEY ([ReturnID])
-);
+--CREATE TABLE [RETURNS] (
+--  [ReturnID] int identity(1, 1) NOT NULL,
+--  [FromCustomerID] int REFERENCES CUSTOMERS(CustomerID) NOT NULL,
+--  [ReturnAmount] smallmoney NOT NULL,
+--  [Date] date NOT NULL,
+--  [CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
+--  [CreatedByUserID] int REFERENCES USERS(UserID) NOT NULL,
+--  PRIMARY KEY ([ReturnID])
+--);
 
 
 
 
-CREATE TABLE [RETURNS_BODY] (
-  [RBodyID] int identity(1, 1) NOT NULL,
-  [ReturnID] int REFERENCES RETURNS(ReturnID) NOT NULL,
-  [CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
-  [ProductID] int REFERENCES PRODUCTS(ProductID) NOT NULL,
-  [Quantity] int NOT NULL,
-  [SellingPrice] smallmoney NOT NULL,
-  PRIMARY KEY ([RBodyID])
-);
+--CREATE TABLE [RETURNS_BODY] (
+--  [RBodyID] int identity(1, 1) NOT NULL,
+--  [ReturnID] int REFERENCES RETURNS(ReturnID) NOT NULL,
+--  [CurrencyID] int REFERENCES CURRENCIES(CurrencyID) NOT NULL,
+--  [ProductID] int REFERENCES PRODUCTS(ProductID) NOT NULL,
+--  [Quantity] int NOT NULL,
+--  [SellingPrice] MONEY NOT NULL,
+--  PRIMARY KEY ([RBodyID])
+--);

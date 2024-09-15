@@ -38,7 +38,6 @@ namespace BMBusiness
             return BrandID != -1;
         }
         private bool Update() => BrandDB.UpdateBrand(BDTO);
-
         public bool Save()
         {
             switch (mode)
@@ -57,7 +56,5 @@ namespace BMBusiness
 
             return false;
         }
-
-
     }
 }

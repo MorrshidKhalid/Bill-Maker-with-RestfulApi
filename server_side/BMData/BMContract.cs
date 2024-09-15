@@ -6,6 +6,7 @@
         public static class Tables
         {
             public const string PEOPLE = "PEOPLE";
+            public const string CUSTOMERS = "CUSTOMERS";
             public const string USERS = "USERS";
             public const string CURRENCIES = "CURRENCIES";
             public const string BRANDS = "BRANDS";
@@ -17,7 +18,9 @@
             public const string TERMS = "TERMS";
             public const string PRODUCTS = "PRODUCTS";
             public const string BUSINESSES = "BUSINESSES";
-            public const string CUSTOMERS = "CUSTOMERS";
+            public const string BILLS = "BILLS";
+            public const string BILLS_BODY = "BILLS_BODY";  
+            
         }
 
 
@@ -44,6 +47,7 @@
             public const string USER_COLUMN_IS_ACTIVE = "IsActive";
             public const string USER_COLUMN_USERNAME = "Username";
             public const string USER_COLUMN_PASSWORD = "Password";
+            public const string USER_COLUMN_PERMISSION = "Permission";
         }
 
 
@@ -62,6 +66,15 @@
         public static class Payment
         {
             public const string PAYMENT_COLUMN_PK = "PaymentID";
+            public const string PAYMENT_COLUMN_CUSTOMER_ID = "CustomerID";
+            public const string PAYMENT_COLUMN_BILL_ID = "BillID";
+            public const string PAYMENT_COLUMN_CURRENCY_ID = "CurrencyID";
+            public const string PAYMENT_COLUMN_METHOD_ID = "MethodID";
+            public const string PAYMENT_COLUMN_RATE = "CurrencyRate";
+            public const string PAYMENT_COLUMN_AMOUNT = "AmountPaid";
+            public const string PAYMENT_COLUMN_REFIND = "ReturnAmount";
+            public const string PAYMENT_COLUMN_DATE = "PaymentDate";
+            public const string PAYMENT_COLUMN_NOTE = "Note";
         }
 
 
@@ -138,7 +151,7 @@
             public const string PRODUCT_COLUMN_QUALITY = "Quality";
         }
 
-        public static string SQL_SELECT_ALL_PRODUCTS_WITH_JOIN = $@"
+        public const string SQL_SELECT_ALL_PRODUCTS_WITH_JOIN = $@"
                              SELECT 
                              {Tables.PRODUCTS}.{Product.PRODUCT_COLUMN_PK},
                              {Tables.BRANDS}.{Brands.BRANDS_COLUMN_NAME},
@@ -175,6 +188,47 @@
             public const string CUSTOMER_COLUMN_PK = "CustomerID";
             public const string CUSTOMER_COLUMN_PERSON_ID = "PersonID";
         }
+
+
+        /* Inner class that defines the (BILLS) table contents */
+        public static class Bill
+        {
+            public const string BILL_COLUMN_PK = "BillID";
+            public const string BILL_COLUMN_BUSINESS_ID = "FromBusinessID";
+            public const string BILL_COLUMN_CUSTOMER_ID = "ToCustomerID";
+            public const string BILL_COLUMN_AMOUNT = "Amount";
+            public const string BILL_COLUMN_DISCOUNT = "Discount";
+            public const string BILL_COLUMN_DATE = "DATE";
+            public const string BILL_COLUMN_STATUS = "BillStatus";
+            public const string BILL_COLUMN_CURRENCY_RATE = "CurrencyRate";
+            public const string BILL_COLUMN_USER_ID = "CreatedByUserID";
+            public const string BILL_COLUMN_CURRENCY_ID = "CurrencyID";
+        }
+        
+        
+        /* Inner class that defines the (BILL_BODY) table contents */
+        public static class BillBody
+        {
+            public const string BBILL_COLUMN_PK = "BBodyID";
+            public const string BBILL_COLUMN_BILL_ID = "BillID";
+            public const string BBILL_COLUMN_PRODUCT_ID = "ProductID";
+            public const string BBILL_COLUMN_QUANTITY = "Quantity";
+            public const string BBILL_COLUMN_PRICE = "SellingPrice";
+            public const string BBILL_COLUMN_CURRENCY_ID = "CurrencyID";
+            
+        }
+
+        public const string JOIN_CUSTOMER_PERSON_INFO = $@"
+                              {Tables.PEOPLE}.*
+                              FROM {Tables.CUSTOMERS}
+                              JOIN {Tables.PEOPLE} ON {Tables.CUSTOMERS}.{Customer.CUSTOMER_COLUMN_PERSON_ID} = {Tables.PEOPLE}.{Person.PERSON_COLUMN_PK}";
+
+
+        public const string JOIN_USERS_PERSON_INFO = $@"
+                              {Tables.PEOPLE}.*
+                              FROM {Tables.USERS}
+                              JOIN {Tables.PEOPLE} ON {Tables.USERS}.{Users.USER_COLUMN_PERSON_ID} = {Tables.PEOPLE}.{Person.PERSON_COLUMN_PK}";
+
 
         public const string SCOPE_IDENTITY = "SELECT SCOPE_IDENTITY();";
     }

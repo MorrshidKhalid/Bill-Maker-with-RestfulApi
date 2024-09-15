@@ -282,72 +282,6 @@ namespace BMData
             return productDetailsDTOs;
         }
 
-        /*
-        public static List<ProductDTO>? GetProductsByColor(string colorID, string order = "DESC")
-        {
-            var productDTOs = new List<ProductDTO>();
-
-
-            string query = $@"{BMContract.SQL_SELECT_ALL_PRODUCTS_WITH_JOIN}
-                              WHERE {PRODUCT_COLUMN_COLOR_ID} = @colorID
-                              ORDER BY @order";
-
-            SqlCommand command = new(query, connection);
-            command.Parameters.AddWithValue("@order", order);
-            command.Parameters.AddWithValue("@colorID", colorID);
-
-            try
-            {
-                connection.Open();
-
-                using SqlDataReader reader = command.ExecuteReader();
-                AddToProductDTOList(ref productDTOs, reader);
-            }
-            catch
-            {
-                productDTOs = null;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return productDTOs;
-        }
-
-        public static List<ProductDTO>? GetProductsByStorage(string storageID, string order = "DESC")
-        {
-            var productDTOs = new List<ProductDTO>();
-
-
-            string query = $@"{BMContract.SQL_SELECT_ALL_PRODUCTS_WITH_JOIN}
-                              WHERE {PRODUCT_COLUMN_STORAGE_ID} = @storageID
-                              ORDER BY @order";
-
-            SqlCommand command = new(query, connection);
-            command.Parameters.AddWithValue("@order", order);
-            command.Parameters.AddWithValue("@storageID", storageID);
-
-            try
-            {
-                connection.Open();
-
-                using SqlDataReader reader = command.ExecuteReader();
-                AddToProductDTOList(ref productDTOs, reader);
-            }
-            catch
-            {
-                productDTOs = null;
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return productDTOs;
-        }
-        */
-
         public static int AddNewProduct(ProductDTO productDTO)
         {
             int insertedID = -1;
@@ -369,7 +303,7 @@ namespace BMData
                               @brandID, @model, @colorID, @storageID, @condition,
                               @termID, @currencyID, @price, @imagePath, @quality
                               );
-                              SELECT SCOPE_IDENTITY();";
+                              {BMContract.SCOPE_IDENTITY}";
 
             SqlCommand command = new(query, connection);
             command.Parameters.AddWithValue("@brandID", productDTO.BrandID);

@@ -18,7 +18,6 @@ public class DBLib
         object result = command.ExecuteScalar();
         if (result != null && int.TryParse(result.ToString(), out int insertedID))
             insID = insertedID;
-
     }
 
     public static void ExecAndGetIntClmValue(ref int clmValue, string clm, SqlCommand command)

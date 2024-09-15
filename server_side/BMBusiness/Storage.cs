@@ -37,9 +37,7 @@ namespace BMBusiness
             StorageID = StorageDB.AddNewStorage(SDTO);
             return StorageID != -1;
         }
-
         private bool Update() => StorageDB.UpdateStorage(SDTO);
-
         public bool Save()
         {
             switch (mode)
